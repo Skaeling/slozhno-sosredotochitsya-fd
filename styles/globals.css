@@ -20,7 +20,7 @@ h5,
 h6,
 p {
   margin: 0;
-  text-wrap: balance;
+  /* text-wrap: balance; */
 }
 
 ul {

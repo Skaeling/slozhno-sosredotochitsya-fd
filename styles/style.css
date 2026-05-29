@@ -81,8 +81,6 @@
     padding: 10px 0;
 }
 
-
-
 .header__theme-menu-button {
   background: transparent;
   border: 1px solid transparent;
@@ -90,26 +88,108 @@
   height: 26px;
 }
 
-.header__title {
+.title {
   color: var(--title-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--title-font-size);
+  font-family: var(--main-font), sans-serif;
   text-shadow: 4px 4px 0 var(--accent-color);
   line-height: 0.8;
+  align-self: center;
+  justify-self: center;
+
 }
 
 .header__subtitle {
-    font-size: 18px;
+  white-space: pre-line;
 }
 
 .title-decor {
-  color: rgb(0, 0, 0);
+  color: var(--subtitle-color);
   background-color: var(--accent-color);
   align-self: start;
-  text-align: left;
-  white-space: pre-line;
+  margin-block-end: 10px;
+  font-size: var(--text-font-size);
 
 }
 
-p {
+.content__section {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  padding: 25px 10px;
+  gap: 20px;
+  font-weight: 700;
+  font-size: var(--text-font-size);
+  font-family: var(--main-font), sans-serif;
   color: var(--text-color);
+
+
 }
+
+.content__section:first-of-type {
+  padding-top: 40px;
+}
+
+.content__section-title {
+  font-weight: 700;
+  font-size: var(--text-font-size);
+  font-family: var(--main-font), sans-serif;
+  color: var(--accent-color);
+}
+
+
+.content__link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0px var(--link-shadow-color);
+}
+
+.content__link:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.content__link:focus {
+  outline: none;
+}
+
+.content__link::focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+.content__section-card-list {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-auto-rows: min-content;
+  gap: 20px;
+
+}
+
+.title-decor-no-margin {
+  margin: 0;
+}
+
+.title-decor-regular {
+  font-weight: 400;
+}
+
+.content__section.images {
+  gap: 10px;
+}
+
+.content__section-image {
+  inline-size: 100%;
+  block-size: 100%;
+  max-block-size: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  display: grid;
+  position: relative;
+  height: 100vh;
+  min-height: 668px;
+}
+
+.footer__title {
+  text-shadow: 2px 2px 0 var(--accent-color);
+
+}
+
