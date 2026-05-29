@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-color: rgba(38, 38, 175, 0.376);
+  background-color: var(--bg-color);
   background-image: var(--cover-image);
   background-position: center;
   background-size: cover;
@@ -16,15 +16,25 @@
     min-height: 668px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: min-content 1fr;
-    gap: 39px;
-    font-family: 'IBM Plex Mono', sans-serif;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 55px;
+    font-family: var(--main-font), sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 18px;
-    line-height: 25px;
-    color: rgb(255, 0, 112);
-    justify-items: end;
+    color: var(--accent-color);
+    padding: 10px;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  margin: 10px;
+  justify-self: start;
+  align-self: end;
 }
 
 .decorated-zone::after {
@@ -32,34 +42,74 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border-top: 1px solid rgb(255, 0, 112);
-  border-right: 1px solid rgb(255, 0, 112);
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
   margin: 10px;
+  justify-self: end;
 }
 
 .header__decor {
+  position: absolute;
   text-transform: uppercase;
-  padding: 10px 38px 0 0;
-
+  justify-self: end;
+  align-self: start;
+  inset: 10px 38px 0 0;
 
 }
 
-.header__decor::after {
-  display: block;
-  position: absolute;
-  content: "";
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: rgb(255, 0, 112);
-  top: 18px;
-  right: 17px;
-  box-shadow: 0 0px 9px 3px rgb(255, 0, 112);
 
+.header__decor::after {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    box-shadow: 0 0px 9px 3px var(--accent-color);
+    align-self: center;
+    margin: 10px;
 }
 
 .header__theme-menu {
-  gap: 10px;
-  padding-right: 10px;
+  align-self: end;
+  justify-self: end;
+}
 
+.header__theme-menu-list {
+    display: grid;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+
+
+.header__theme-menu-button {
+  background: transparent;
+  border: 1px solid transparent;
+  width: 70px;
+  height: 26px;
+}
+
+.header__title {
+  color: var(--title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 0.8;
+}
+
+.header__subtitle {
+    font-size: 18px;
+}
+
+.title-decor {
+  color: rgb(0, 0, 0);
+  background-color: var(--accent-color);
+  align-self: start;
+  text-align: left;
+  white-space: pre-line;
+
+}
+
+p {
+  color: var(--text-color);
 }

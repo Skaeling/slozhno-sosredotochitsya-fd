@@ -5,4 +5,9 @@
 
 :root {
   --cover-image: url(../images/cover-image.png);
+  --bg-color: rgba(38, 38, 175, 0.376);
+  --accent-color: rgb(255, 0, 112);
+  --text-color: rgb(241, 178, 206);
+  --title-color: rgb(219, 0, 255);
+  --main-font: 'IBM Plex Mono';
 }
