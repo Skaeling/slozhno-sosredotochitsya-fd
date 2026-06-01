@@ -10,6 +10,9 @@ body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
   margin: 0 auto;
+  background-color: rgb(0 0 40);
+  color: rgb(241 178 206);
+  font-family: 'IBM Plex Mono';
 }
 
 h1,
