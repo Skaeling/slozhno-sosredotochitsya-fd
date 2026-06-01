@@ -10,38 +10,35 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --cover-image: url(../images/cover-image-light.png);
-  --bg-color: rgb(255, 241, 247);  
-  --accent-color: rgba(255, 141, 203, 1);
-  --text-color: rgba(53, 52, 48, 1);
-  --title-color: rgba(255, 194, 230, 1);
-  --link-shadow-color: rgba(255, 141, 203, 1);
-  --content-section-color: rgba(53, 52, 48, 1);
-  --subtitle-color: rgba(53, 52, 48, 1);
-  --menu-text-color: rgba(53, 52, 48, 1);
-  
+  --bg-color: rgb(255 241 247);
+  --accent-color: rgb(255 141 203 / 1);
+  --text-color: rgb(53 52 48 / 1);
+  --title-color: rgb(255 194 230 / 1);
+  --link-shadow-color: rgb(255 141 203 / 1);
+  --content-section-color: rgb(53 52 48 / 1);
+  --subtitle-color: rgb(53 52 48 / 1);
+  --menu-text-color: rgb(53 52 48 / 1);
+
   .header__decor {
-  visibility: hidden;
- }
-;
+    visibility: hidden;
+  }
 }
 
- 
-
 @media (prefers-color-scheme: light) {
+
   :root {
-  --cover-image: url(../images/cover-image-light.png);
-  --bg-color: rgb(255, 241, 247);  
-  --accent-color: rgba(255, 141, 203, 1);
-  --text-color: rgba(53, 52, 48, 1);
-  --title-color: rgba(255, 194, 230, 1);
-  --link-shadow-color: rgba(255, 141, 203, 1);
-  --content-section-color: rgba(53, 52, 48, 1);
-  --subtitle-color: rgba(53, 52, 48, 1);
-  --menu-text-color: rgba(53, 52, 48, 1);
+    --cover-image: url(../images/cover-image-light.png);
+    --bg-color: rgb(255 241 247);
+    --accent-color: rgb(255 141 203 / 1);
+    --text-color: rgb(53 52 48 / 1);
+    --title-color: rgb(255 194 230 / 1);
+    --link-shadow-color: rgb(255 141 203 / 1);
+    --content-section-color: rgb(53 52 48 / 1);
+    --subtitle-color: rgb(53 52 48 / 1);
+    --menu-text-color: rgb(53 52 48 / 1);
 
-  .header__decor {
-  display: none;
- }
-
+    .header__decor {
+      display: none;
+    }
   }
 }
